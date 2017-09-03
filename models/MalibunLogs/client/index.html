@@ -1,0 +1,31 @@
+<template name="malibunLogsIndex">
+    {{> breadcrumb}}
+    {{#malibunSpoiler name="Выборка"}}
+        {{>Template.dynamic template="querybuilder" data=querybuilderData}}
+    {{/malibunSpoiler}}
+
+    {{> pagesNav}}
+    {{> pages}}
+    {{> pagesNav}}
+
+</template>
+
+<template name="malibunLogsRow">
+    <tr class="malibunLogsRow">
+        <td class="name">
+            <a href="/malibunLogs/view/{{_id}}/">{{message}}</a>
+        </td>
+
+        <td>{{formatRuDateTimeMS created}}</td>
+        <td>{{tag}}</td>
+        <td>{{levelName}}</td>
+        <td>{{server_id}}</td>
+        <td>{{worker_id}}</td>
+        <td>{{dataString}}</td>
+
+        <td>{{>deleteButton collection="MalibunLogs" model=this label="Удалить"
+                confirm="Действительно удалить \"{message}\"?"
+                success="\"{message}\" удален"}}
+        </td>
+    </tr>
+</template>

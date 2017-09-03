@@ -1,0 +1,14 @@
+<template name="malibunLogsView">
+    {{> breadcrumb}}
+
+    <b>{{malibunLabel 'created'}}:</b> {{formatRuDateTimeMS model.created}}<br/>
+    <b>{{malibunLabel 'message'}}:</b> {{model.message}}<br/>
+    <b>{{malibunLabel 'tag'}}:</b> {{model.tag}}<br/>
+    <b>{{malibunLabel 'level'}}:</b> {{model.level}}<br/>
+    <b>{{malibunLabel 'server_id'}}:</b> {{model.server_id}}<br/>
+    <b>{{malibunLabel 'worker_id'}}:</b> {{model.worker_id}}<br/>
+
+
+
+    <b>{{malibunLabel 'dataString'}}:</b> {{model.dataString}}<br/>
+</template>

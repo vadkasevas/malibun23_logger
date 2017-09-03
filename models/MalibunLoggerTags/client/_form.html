@@ -1,0 +1,22 @@
+<template name="malibunLoggerTags_form">
+    {{> breadcrumb}}
+    <div style="margin-left:50px;width:400px;">
+        {{#autoForm collection="MalibunLoggerTags" type=MalibunAction.data.formType id=MalibunAction.data.formId doc=model}}
+            <div style="margin-left:30px;margin-right:30px;">
+                {{>afQuickField name="name"}}
+
+                {{>afQuickField name="console.level"}}
+                {{>afQuickField name="mongo.level"}}
+                {{>afQuickField name="mongoGlobal.level"}}
+
+            </div>
+            <button type="submit">
+            	{{#if (equals MalibunAction.data.formType 'insert') }}
+                	Создать
+            	{{else}}
+                	Сохранить
+            	{{/if}}
+            </button>
+        {{/autoForm }}
+    </div>
+</template>

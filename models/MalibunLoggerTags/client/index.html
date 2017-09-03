@@ -1,0 +1,22 @@
+<template name="malibunLoggerTagsIndex">
+    {{> breadcrumb}}
+    <a href="/malibunLoggerTags/create">Создать новый...</a>
+
+    {{> pagesNav}}
+    {{> pages}}
+    {{> pagesNav}}
+
+</template>
+
+<template name="malibunLoggerTagsRow">
+    <tr class="malibunLoggerTagsRow">
+        <td class="name">
+            <a href="/malibunLoggerTags/update/{{_id}}/">{{name}}</a>
+        </td>
+
+        <td>{{>deleteButton collection="MalibunLoggerTags" model=this label="Удалить"
+                confirm="Действительно удалить \"{name}\"?"
+                success="\"{name}\" удален"}}
+        </td>
+    </tr>
+</template>
