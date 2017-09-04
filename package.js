@@ -2,7 +2,7 @@ Package.describe({
     name: 'malibun23:logger',
     version: '0.0.18',
     summary: 'logger',
-    git: '',
+    git: 'https://github.com/vadkasevas/malibun23_logger',
     documentation: null
 });
 
