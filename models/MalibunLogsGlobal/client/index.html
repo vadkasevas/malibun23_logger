@@ -21,7 +21,7 @@
         <td>{{levelName}}</td>
         <td>{{server_id}}</td>
         <td>{{worker_id}}</td>
-        <td>{{dataString}}</td>
+        <td>{{prettyJson dataString}}</td>
 
         <td>{{>deleteButton collection="MalibunLogsGlobal" model=this label="Удалить"
                 confirm="Действительно удалить \"{message}\"?"

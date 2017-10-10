@@ -1,6 +1,6 @@
 Package.describe({
     name: 'malibun23:logger',
-    version: '0.0.20',
+    version: '0.0.23',
     summary: 'logger',
     git: 'https://github.com/vadkasevas/malibun23_logger',
     documentation: null
@@ -19,7 +19,7 @@ Package.onUse(function(api) {
     api.use('templating', 'client');
     api.use('aldeed:simple-schema@1.5.3',['client','server']);
     api.use('aldeed:autoform@5.8.1','client');
-    api.use('malibun23:stack@0.0.20');
+    api.use('malibun23:stack@0.0.23');
 
 
     api.addFiles([
