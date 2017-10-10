@@ -1,6 +1,6 @@
 Package.describe({
     name: 'malibun23:logger',
-    version: '0.0.23',
+    version: '0.0.29',
     summary: 'logger',
     git: 'https://github.com/vadkasevas/malibun23_logger',
     documentation: null
@@ -19,8 +19,7 @@ Package.onUse(function(api) {
     api.use('templating', 'client');
     api.use('aldeed:simple-schema@1.5.3',['client','server']);
     api.use('aldeed:autoform@5.8.1','client');
-    api.use('malibun23:stack@0.0.23');
-
+    api.use('malibun23:stack@0.0.24');
 
     api.addFiles([
         'models/MalibunLoggerTags/client/_form.html',
@@ -31,6 +30,7 @@ Package.onUse(function(api) {
 
         'models/MalibunLogsGlobal/client/index.html',
         'models/MalibunLogsGlobal/client/view.html',
+        'client/prettyHelper.js'
     ],['client']);
 
     api.addFiles([
@@ -43,7 +43,7 @@ Package.onUse(function(api) {
         'models/MalibunLogs/malibunLogsController.js',
 
         'models/MalibunLogsGlobal/MalibunLogsGlobal.js',
-        'models/MalibunLogsGlobal/malibunLogsGlobalController.js',
+        'models/MalibunLogsGlobal/malibunLogsGlobalController.js'
 
     ]);
     api.addFiles(['server.js', 'models/MalibunLoggerTags/server/server.js'],['server']);
