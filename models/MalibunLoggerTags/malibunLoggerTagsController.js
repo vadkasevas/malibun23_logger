@@ -1,3 +1,5 @@
+import { action } from 'meteor/malibun23:stack';
+
 MalibunCollection.ready('malibunLoggerTags', function () {
     MalibunLoggerTagsController = class MalibunLoggerTagsController extends MalibunController {
         constructor() {
@@ -22,6 +24,7 @@ MalibunCollection.ready('malibunLoggerTags', function () {
             });
         }
 
+        @action
         actionIndex() {
             var controller = this;
             return super.actionIndex().extends({
@@ -37,10 +40,12 @@ MalibunCollection.ready('malibunLoggerTags', function () {
             });
         }
 
+        @action
         actionView() {
             return null;
         }
 
+        @action
         actionCreate() {
             var controller = this;
             var template = this.getTemplate('_form');
@@ -66,6 +71,7 @@ MalibunCollection.ready('malibunLoggerTags', function () {
             });
         }
 
+        @action
         actionUpdate() {
             var controller = this;
             var template = this.getTemplate('_form');

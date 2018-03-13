@@ -1,3 +1,5 @@
+import { action } from 'meteor/malibun23:stack';
+
 MalibunCollection.ready('malibunLogsGlobal', function () {
     MalibunLogsGlobalController = class MalibunLogsGlobalController extends MalibunController {
         constructor() {
@@ -32,6 +34,7 @@ MalibunCollection.ready('malibunLogsGlobal', function () {
             });
         }
 
+        @action
         actionIndex() {
             var controller = this;
             return super.actionIndex().extends({
@@ -126,6 +129,7 @@ MalibunCollection.ready('malibunLogsGlobal', function () {
             });
         }
 
+        @action
         actionView() {
             var controller = this;
             return super.actionView().extends({
@@ -133,10 +137,12 @@ MalibunCollection.ready('malibunLogsGlobal', function () {
             });
         }
 
+        @action
         actionCreate() {
             return null;
         }
 
+        @action
         actionUpdate() {
             return null;
         }
