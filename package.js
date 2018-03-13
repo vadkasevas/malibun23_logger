@@ -7,7 +7,7 @@ Package.describe({
 });
 
 Npm.depends({
-
+    "babel-plugin-transform-decorators-legacy": "1.3.4"
 });
 
 Package.onUse(function(api) {
